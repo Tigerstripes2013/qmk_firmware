@@ -8,6 +8,6 @@
 
 #include "../../config.h"
 
-#define TAPPING_TERM 500
+#define TAPPING_TERM 260
 
 #endif
