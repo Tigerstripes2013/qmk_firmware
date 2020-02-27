@@ -2,15 +2,16 @@
 
 enum {
     TD_COL = 0,
-    //BE_TD_CTL, //not used; kept here for formatting reminder
-    //BE_TD_ALT,  //not used; kept here for formatting reminder
+    TD_DASH, //not used; kept here for formatting reminder
+    //TD_ALT,  //not used; kept here for formatting reminder
 };
 
 //Tap Dance Definitions
 qk_tap_dance_action_t tap_dance_actions[] = {
   //Tap once for apostrophe, twice for semicolon
   //Shift hopefully keeps shift properties for the actions (" and :)
-  [TD_COL]  = ACTION_TAP_DANCE_DOUBLE(KC_QUOT, KC_SCLN)
+  [TD_COL]  = ACTION_TAP_DANCE_DOUBLE(KC_QUOT, KC_SCLN),
+  [TD_DASH]  = ACTION_TAP_DANCE_DOUBLE(KC_MINS, KC_EQL)
 // Other declarations would go here, separated by commas, if you have them
 };
 
@@ -30,7 +31,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS,          KC_TRNS, KC_LEFT, KC_DOWN, KC_RIGHT
   ),
   [2] = LAYOUT_arrow_command( /* hold left backspace and enter LAYER 2 for classic numbers at top plus symbols 1 below*/
-    KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_TRNS,
+    KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    TD(TD_DASH),
     KC_TRNS, KC_EXLM, KC_AT,  KC_HASH, KC_DLR, KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN,  KC_RPRN, KC_DEL,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_LBRC, KC_RBRC, KC_TRNS, KC_TRNS,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
