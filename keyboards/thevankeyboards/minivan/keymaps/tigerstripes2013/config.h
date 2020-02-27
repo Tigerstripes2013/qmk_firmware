@@ -7,7 +7,7 @@
 #define CONFIG_USER_H
 
 #include "../../config.h"
-
+#define TAPPING_TOGGLE 1
 #define TAPPING_TERM 260
 
 #endif
