@@ -1,5 +1,5 @@
 #pragma once
-
+#define IGNORE_MOD_TAP_INTERRUPT
 #define PERMISSIVE_HOLD
 #define RGBLIGHT_EFFECT_BREATHING
 
@@ -8,6 +8,6 @@
 
 #include "../../config.h"
 #define TAPPING_TOGGLE 1
-#define TAPPING_TERM 260
+#define TAPPING_TERM 390
 
 #endif
